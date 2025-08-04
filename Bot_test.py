@@ -43,7 +43,9 @@ async def time_now(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(message)
        
 async def main():
-    application = Application.builder().token("7360719959:AAFOZDqBoa6KtOJpaSKZriVWN3s69mQ6Xis").build()
+    with open('TG_API_key.txt', 'r') as file:
+        API_key = file.read().strip() 
+    application = Application.builder().token(API_key).build()
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("wassup", how_are_you))
     application.add_handler(CommandHandler("timenow", time_now))
