@@ -16,10 +16,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Привет, я Зойц-бот! Напиши /wassup, чтобы я спросил как дела. Можешь спросить сколько время - /timenow")
+    await update.message.reply_text("Привет, я бета бот Зойц! Напиши /wassup, чтобы я спросил как дела. Можешь спросить сколько время - /timenow")
 
 async def how_are_you(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Как дела?")
+    await update.message.reply_text("Как дела? У меня все хорошо. Бот крутится, баблишки мутятся!")
     await update.message.reply_photo(photo=open('D:/Telegram_Bot/Balu_Hello.jpg', 'rb'))
 
 async def time_now(update: Update, context: ContextTypes.DEFAULT_TYPE):
